@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="browsermode" content="application"><meta name="full-screen" content="yes"><meta name="x5-fullscreen" content="true"><meta name="x5-page-mode" content="app"><meta name="360-fullscreen" content="true"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><!--[if IE]><link rel="icon" href="/tally-book-website/favicon.ico"><![endif]--><title>money</title><link href="/tally-book-website/css/app.4d179a40.css" rel="preload" as="style"><link href="/tally-book-website/js/app.df91b61b.js" rel="preload" as="script"><link href="/tally-book-website/js/chunk-vendors.866073b2.js" rel="preload" as="script"><link href="/tally-book-website/css/app.4d179a40.css" rel="stylesheet"><link rel="icon" type="image/png" sizes="32x32" href="/tally-book-website/img/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/tally-book-website/img/icons/favicon-16x16.png"><link rel="manifest" href="/tally-book-website/manifest.json"><meta name="theme-color" content="#4DBA87"><meta name="apple-mobile-web-app-capable" content="no"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="money"><link rel="apple-touch-icon" href="/tally-book-website/img/icons/apple-touch-icon-152x152.png"><link rel="mask-icon" href="/tally-book-website/img/icons/safari-pinned-tab.svg" color="#4DBA87"><meta name="msapplication-TileImage" content="/tally-book-website/img/icons/msapplication-icon-144x144.png"><meta name="msapplication-TileColor" content="#000000"></head><body><noscript><strong>We're sorry but money doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script src="/tally-book-website/js/chunk-vendors.866073b2.js"></script><script src="/tally-book-website/js/app.df91b61b.js"></script></body></html><script>window.onload = function () {
+        // 阻止双击放大
+        let lastTouchEnd = 0;
+        document.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
+        document.addEventListener('touchend', function (event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+
+        // 阻止双指放大
+        document.addEventListener('gesturestart', function (event) {
+            event.preventDefault();
+        });
+    }</script>
